@@ -1,0 +1,51 @@
+
+<form action="/edited/{{todo._id}}/{{userId}}" method="post">
+    <table>
+        <tr>
+            <td>
+                Edit ToDo Name :
+            </td>
+            <td>
+                <input type="text" name="todoname" value="{{todo.name}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Edit ToDo description :
+            </td>
+            <td>
+                <input type="text" name="tododescription" value="{{todo.description}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                status :
+            </td>
+            <td>
+                {{!-- {{#customHelper todo.status}}
+                <input type="checkbox" name="todocheckbox" value="complete" checked/>
+                {{else}}
+                <input type="checkbox" name="todocheckbox" value="pending"/>
+                {{/customHelper}} --}}
+                <input type="checkbox" name="todocheckbox" value="pending"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">save</button>
+
+            </td>
+        </tr>
+    </table>
+</form>
+
+<form action="/todolist/{{userId}}" method="get">
+    <table>
+        <tr>
+            <td>
+                <button type="submit" >cancel</button>
+                {{!-- <a href="/todolist">cancel</a> --}}
+            </td>
+        </tr>
+    </table>
+</form>

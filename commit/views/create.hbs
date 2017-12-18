@@ -1,0 +1,50 @@
+<h3>To Do</h3>
+<form action="/save/{{userId}}" method="post">
+    <table>
+        <tr>
+            <td>
+                ToDo name :
+            </td>
+            <td>
+                <input type="text" name="todoname"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ToDo description :
+            </td>
+            <td>
+                <input type="text" name="tododescription"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Status :
+            </td>
+            <td>
+                <input type="checkbox" name="todocheckbox" value="completed"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button type="submit">save</button>
+
+            </td>
+            <td>
+                
+            </td>
+        </tr>
+    </table>
+</form>
+<form action="/" method="get">
+    <table>
+        <tr>
+            <td>
+                <button type="submit" >cancel</button>
+                {{!-- <a href="/todolist">cancel</a> --}}
+            </td>
+        </tr>
+    </table>
+</form>
